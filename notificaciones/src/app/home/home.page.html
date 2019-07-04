@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Notificaciones
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+  <ion-list>
+    <ion-item *ngFor="let notificacion of notificaciones">
+      <ion-label>{{notificacion}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
